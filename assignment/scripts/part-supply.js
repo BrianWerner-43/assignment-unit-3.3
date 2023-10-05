@@ -30,9 +30,16 @@ console.log('The second item is:', secondItem);
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
 console.log('4. Remove the last value from supplyChanges:');
 
+let removedItem = supplyChanges.pop();
+console.log('Removed last item is:', removedItem);
+
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Add the value 25 into supplyChanges.');
+
+supplyChanges.push(25);
+console.log('Added parts to supplyChanges', supplyChanges);
+
 
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -44,6 +51,24 @@ console.log('5. Add the value 25 into supplyChanges.');
 //      - If the value is a zero, push it into the 'zeroes' array.
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
 
+let positives = [];
+let negatives = [];
+let zeroes = [];
+
+for (let i = 0; i < supplyChanges.length; i++) {
+  if (supplyChanges[i] > 0) {
+    positives.push(supplyChanges[i]);
+  } else if (supplyChanges[i] < 0) {
+    negatives.push(supplyChanges[i]);
+  } else {
+    zeroes.push(supplyChanges[i]);
+  }
+};
+console.log('These are the positive numbers:', positives);
+console.log('These are the negative numbers:', negatives);
+console.log('This is the zeroes in our array:', zeroes);
+  
+ 
 
 
 
